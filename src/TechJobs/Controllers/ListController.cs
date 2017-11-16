@@ -7,7 +7,8 @@ namespace TechJobs.Controllers
 {
     public class ListController : Controller
     {
-        internal static Dictionary<string, string> columnChoices = new Dictionary<string, string>();
+        internal static Dictionary<string, string> columnChoices =
+            new Dictionary<string, string>();
 
         // This is a "static constructor" which can be used
         // to initialize static members of a class
@@ -48,7 +49,8 @@ namespace TechJobs.Controllers
 
         public IActionResult Jobs(string column, string value)
         {
-            List<Dictionary<String, String>> jobs = JobData.FindByColumnAndValue(column, value);
+            List<Dictionary<String, String>> jobs = 
+                JobData.FindByColumnAndValue(column, value);
             ViewBag.title = "Jobs with " + columnChoices[column] + ": " + value;
             ViewBag.jobs = jobs;
 

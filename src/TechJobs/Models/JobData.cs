@@ -7,7 +7,8 @@ namespace TechJobs.Models
 {
     class JobData
     {
-        static List<Dictionary<string, string>> AllJobs = new List<Dictionary<string, string>>();
+        static List<Dictionary<string, string>> AllJobs =
+            new List<Dictionary<string, string>>();
         static bool IsDataLoaded = false;
 
         public static List<Dictionary<string, string>> FindAll()
